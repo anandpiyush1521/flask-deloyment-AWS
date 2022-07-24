@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 application = Flask(__name__)
 app = application
@@ -6,7 +6,7 @@ app = application
 
 @application.route("/")
 def home():
-    return "<h1>hello world! Flask Deployment is completed</h1>"
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
